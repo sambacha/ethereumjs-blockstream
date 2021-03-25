@@ -42,10 +42,10 @@ export class MockBlock implements Block {
 	readonly stateRoot: string = "string";
 	readonly receiptsRoot: string = "string";
 	readonly miner: string = "string";
-	readonly difficulty: string = "string";
+	readonly difficulty: number = "string";
 	readonly totalDifficulty: string = "string";
 	readonly size: string = "string";
-	readonly gasLimit: string = "string";
+	readonly gasLimit: BigNumber = "string";
 	readonly gasUsed: string = "string";
 	readonly timestamp: string = "string";
 	readonly transactions: string[] | Transaction[] = []
@@ -66,7 +66,7 @@ export class MockLog implements Log {
 	readonly blockNumber: string
 	readonly blockHash: string
 	readonly transactionHash: string = "0xbaadf00dbaadf00dbaadf00dbaadf00dbaadf00dbaadf00dbaadf00dbaadf00d";
-	readonly transactionIndex: string = "0x0";
+	readonly transactionIndex: number = "0x0";
 	readonly address: string = "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef";
 	readonly data: string = "0x0000000000000000000000000000000000000000000000000000000000000000";
 	readonly topics: string[] = [];
