@@ -1,4 +1,5 @@
 import { Block, Transaction, Log, FilterOptions } from "../source/index";
+import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
 
 export function delay(milliseconds: number): Promise<void> { return new Promise<void>((resolve, reject) => setTimeout(resolve, milliseconds)); }
 
