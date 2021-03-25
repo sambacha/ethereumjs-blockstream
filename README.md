@@ -4,14 +4,14 @@
 
 A library to turn an unreliable remote source of Ethereum blocks into a reliable stream of blocks.  Handles block and log removals on chain reorganization and block and log backfills on skipped blocks.
 
-# Requirements for supported Ethereum node
+## Requirements for supported Ethereum node
 Blockstream requires support for [EIP-234](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-234.md) in the configured Ethereum node. EIP-234 was merged Jul 28, 2018 and implemented in Geth and Parity shortly after. Versions that provide the needed functionality:
 - Parity: v2.1.0+
 - geth: v1.8.13+
 
-# Usage
+## Usage
 
-## Full Example
+### Full Example
 ```typescript
 // blockRetention is how many blocks of history to keep in memory.  it defaults to 100 if not supplied
 const configuration = { blockRetention: 100 };
@@ -63,15 +63,15 @@ blockAndLogStreamer.removeLogFilter(logFilterToken);
 console.log(blockAndLogStreamer.getLatestReconciledBlock());
 ```
 
-## Signatures
+### Signatures
 Note: if you have a TypeScript aware editor this will all be available in the tooltip
 * [Filter/FilterOptions](https://github.com/ethereumjs/ethereumjs-blockstream/blob/master/source/models/filters.ts#L1-L10) - More details at [Parity JSON-RPC Wiki](https://wiki.parity.io/JSONRPC-eth-module#eth_newfilter)
 * [Block](https://github.com/ethereumjs/ethereumjs-blockstream/blob/master/source/models/block.ts#L3-L22) - More details at [Parity JSON-RPC Wiki](https://wiki.parity.io/JSONRPC-eth-module#eth_getblockbyhash)
 * [Log](https://github.com/ethereumjs/ethereumjs-blockstream/blob/master/source/models/log.ts#L1-L10) - More details at [Parity JSON-RPC Wiki](https://wiki.parity.io/JSONRPC-eth-module#eth_getfilterchanges)
 
-# Development
+## Development
 
-## Build
+### Build
 ```
 docker build -t blockstream .
 ```
@@ -80,7 +80,7 @@ or
 npm run build
 ```
 
-## Test
+### Test
 ```
 docker run blockstream
 ````
