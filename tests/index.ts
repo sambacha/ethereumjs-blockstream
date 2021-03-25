@@ -1,3 +1,4 @@
+import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
 import { reconcileBlockHistory } from "../source/block-reconciler";
 import { reconcileLogHistoryWithAddedBlock, reconcileLogHistoryWithRemovedBlock } from "../source/log-reconciler";
 import { Block, Log, FilterOptions, BlockAndLogStreamer } from "../source/index";
