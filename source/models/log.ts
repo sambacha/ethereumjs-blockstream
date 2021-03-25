@@ -1,5 +1,9 @@
+// @file Log
+// @exports LogInterface
 export interface Log {
-	readonly logIndex: string,
-	readonly blockNumber: string,
-	readonly blockHash: string,
+	readonly blockNumber: string;
+	readonly blockHash: string;
+	readonly transactionIndex: number;
+	readonly logIndex: string;
+	readonly topics: string[];
 }
